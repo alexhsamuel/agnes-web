@@ -8,6 +8,7 @@ body {
   height: 100%;
   margin: 0;
   font-family: Cabin, monospace;
+  font-size: 16px;
   color: #55605a;
 }
 
@@ -49,12 +50,16 @@ body {
   flex-shrink: 0;
 }
 
-.row > *:first-child {
-  margin-right: 3%;
-}
+@media only screen and (min-width: 600px) {
 
-.row > *:last-child {
-  margin-left: 3%;
+  .row > *:first-child {
+    margin-right: 3%;
+  }
+
+  .row > *:last-child {
+    margin-left: 3%;
+  }
+
 }
 
 .box {
@@ -70,3 +75,6 @@ body {
   padding: 12px 24px;
 }
 
+h2 {
+  margin-top: 0;
+}
