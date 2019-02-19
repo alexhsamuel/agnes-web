@@ -8,7 +8,7 @@ body {
   height: 100%;
   margin: 0;
   font-family: Cabin, monospace;
-  font-size: 16px;
+  font-size: 18px;
   color: #55605a;
 }
 
@@ -50,21 +50,29 @@ body {
   flex-shrink: 0;
 }
 
-@media only screen and (min-width: 600px) {
+.row > *:first-child {
+  margin-right: 3%;
+}
 
-  .row > *:first-child {
-    margin-right: 3%;
-  }
-
-  .row > *:last-child {
-    margin-left: 3%;
-  }
-
+.row > *:last-child {
+  margin-left: 3%;
 }
 
 .box {
   padding: 24px;
   box-sizing: border-box;
+}
+
+@media only screen and (max-width: 600px) {
+  .row > *:first-child {
+    padding-right: 0;
+  }
+  .row > *:last-child {
+    padding-left: 0;
+  }
+  .box {
+    padding-top: 0;
+  }
 }
 
 .footer {
