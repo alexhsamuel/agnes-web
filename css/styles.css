@@ -9,7 +9,7 @@ body {
   margin: 0;
   font-family: Cabin, monospace;
   font-size: 18px;
-  color: #55605a;
+  color: #49545f;
 }
 
 .container {
@@ -18,7 +18,7 @@ body {
 .hero {
   width: 100%;
   height: 66.667vw;  /* image aspect ratio */
-  background-image: url("../img/IMG_0010.jpg");
+  background-image: url("../img/IMG_0010a.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -63,7 +63,17 @@ body {
   box-sizing: border-box;
 }
 
-@media only screen and (max-width: 600px) {
+.drop > p {
+  margin: 9px 0;
+}
+
+@media screen and (max-width: 1000px) and (-webkit-min-device-pixel-ratio: 2) {
+  body {
+    font-size: 32px;
+  }
+  .row {
+    margin-bottom: 48px;
+  }
   .row > *:first-child {
     padding-right: 0;
   }
@@ -78,11 +88,13 @@ body {
 .footer {
   width: 100%;
   color: #eee;
-  background: #55606a;
+  background: #49545f;
   box-sizing: border-box;
   padding: 12px 24px;
 }
 
-h2 {
+h3 {
   margin-top: 0;
+  font-size: 133%;
 }
+
