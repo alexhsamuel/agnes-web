@@ -8,8 +8,10 @@ body {
   height: 100%;
   margin: 0;
   font-family: Cabin, monospace;
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 1.31;
   color: #49545f;
+  background: #eaeef2;
 }
 
 .container {
@@ -38,29 +40,31 @@ body {
 .row {
   width: 100%;
   display: flex;
-  margin: 24px 0;
+  margin: 48px 0;
   flex-direction: row;
 }
 
 .row > * {
-  width: 47%;
-  height: 47%;
+  width: 48%;
+  height: 48%;
   flex-grow: 0;
   flex-basis: auto;
   flex-shrink: 0;
 }
 
 .row > *:first-child {
-  margin-right: 3%;
+  margin-right: 2%;
 }
 
 .row > *:last-child {
-  margin-left: 3%;
+  margin-left: 2%;
 }
 
 .box {
-  padding: 24px;
+  padding: 0 24px 0 24px;
+  margin-bottom: 24px;
   box-sizing: border-box;
+  margin-collapse: collapse;
 }
 
 .drop > p {
@@ -69,19 +73,26 @@ body {
 
 @media screen and (max-width: 1000px) and (-webkit-min-device-pixel-ratio: 2) {
   body {
-    font-size: 32px;
+    font-size: 36px;
   }
   .row {
     margin-bottom: 48px;
+    flex-direction: column;
+  }
+  .row.rev {
+    flex-direction: column-reverse;
+  }
+  .row > * {
+    width: 100%;
   }
   .row > *:first-child {
-    padding-right: 0;
+    margin-right: 0;
   }
   .row > *:last-child {
-    padding-left: 0;
+    margin-left: 0;
   }
   .box {
-    padding-top: 0;
+    padding: 0 48px 48px 48px;
   }
 }
 
@@ -90,7 +101,11 @@ body {
   color: #eee;
   background: #49545f;
   box-sizing: border-box;
-  padding: 12px 24px;
+  padding: 12px 24px 24px 36px;
+}
+
+.footer p {
+  margin-top: 0;
 }
 
 h3 {
@@ -98,3 +113,15 @@ h3 {
   font-size: 133%;
 }
 
+p {
+  margin-bottom: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.link {
+  font-weight: 700;
+}
