@@ -140,14 +140,35 @@ a.link {
   background: #eaeef0;
 }
 
+.care .icon {
+  height: 0;
+  width: 100px;
+  display: inline-block;
+  position: relative;
+}
+
 .care h3 {
   display: inline-block;
   font-size: 36px;
+  margin-left: -6px;
   margin-bottom: 12px;
 }
 
+.care.section p {
+  padding-left: 100px;
+}
+
 .care p {
-  padding-left: 84px;
+  padding-left: 0;
+}
+
+.care ol {
+  margin-left: 89px;
+  padding-left: 24px;
+}
+
+.care li {
+  margin-bottom: 18px;
 }
 
 .care-hero {
@@ -176,9 +197,7 @@ a.link {
 
 .care-hero > h1 {
   font-size: 96px;
-}
-
-.care-hero > ul {
-  list-style-type: none;
+  font-style: italic;
+  margin-left: -8px;
 }
 
