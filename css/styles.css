@@ -19,8 +19,6 @@ body {
 
 .hero {
   width: 100%;
-  height: 66.667vw;  /* image aspect ratio */
-  background-image: url("../img/IMG_0010a.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -28,13 +26,27 @@ body {
   margin-bottom: 60px;
 
   display: flex;
+  flex-direction: column;
+
+  font-size: 18px;
+  color: white;
+}
+
+.index-hero {
+  height: 66.667vw;  /* image aspect ratio */
+  justify-content: start;
+  align-items: center;
+}
+
+.hero > .img {
+  flex-grow: 1;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .hero > h1 {
   color: #fff;
-  font-size: 96px;
 }
 
 .row {
@@ -109,8 +121,102 @@ a.link {
   font-size: 90%;
 }
 
+.care {
+  width: 90%;
+  margin: 12px auto;
+  background: #eaeef0;
+}
+
+.care-hero {
+  height: 52vw;
+  justify-content: start;
+  align-items: flex-start;
+}
+
+nav, .aliases {
+  color: white;
+  margin-top: 24px;
+  padding-left: 2em;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.care-hero > h1 {
+  font-size: 96px;
+  font-style: italic;
+  margin-top: 100px;
+}
+
+.care.carebox {
+  width: 80%;
+  background: white;
+  margin: 1em auto;
+  padding: 0 2em 1em 2em;
+  display: flex;
+}
+
+.care .icon {
+  flex-basis: 100px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.care .icon img {
+  position: relative;
+}
+
+.care .carebox h2 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.care p {
+  padding-left: 0;
+}
+
+img.light, img.flowers, img.pets {
+  top: 0px;
+  left: 0px;
+}
+img.water {
+  width: 64px;
+  top: 6px;
+  left: 8px;
+}
+img.dirt {
+  width: 72px;
+  top: 2px;
+  left: 6px;
+}
+img.propagation {
+  top: 0px;
+  left: 4px;
+}
+img.ohno {
+  width: 74px;
+  top: 2px;
+  left: 4px;
+}
+
+@media screen and (max-width: 1000px) and (-webkit-min-device-pixel-ratio: 2) {
+  img.light, img.flowers, img.pets {
+    top: 1.1em;
+  }
+  img.water {
+    top: 1.3em;
+  }
+  img.dirt, img.propagation, img.ohno {
+    top: 1.2em;
+  }
+}
+
+/*----------------------------------------------------------------------------*/
+
 @media screen and (max-width: 1000px) and (-webkit-min-device-pixel-ratio: 2) {
   body {
+    font-size: 36px;
+  }
+  .hero {
     font-size: 36px;
   }
   .row {
@@ -132,83 +238,8 @@ a.link {
   .box {
     padding: 60px;
   }
-}
-
-.care {
-  width: 90%;
-  margin: 12px auto;
-  background: #eaeef0;
-}
-
-.care.carebox {
-  width: 80%;
-  background: white;
-  margin: 12px auto;
-  padding: 0 48px 24px 24px;
-  display: flex;
-}
-
-.care .icon {
-  flex-basis: 100px;
-  flex-grow: 0;
-  flex-shrink: 0;
-}
-
-.care .icon img {
-  position: relative;
-}
-
-.care .carebox h2 {
-  margin-top: 12px;
-  margin-bottom: 12px;
-}
-
-.care p {
-  padding-left: 0;
-}
-
-.care ol {
-  margin-left: 89px;
-  padding-left: 24px;
-}
-
-.care li {
-  margin-bottom: 18px;
-}
-
-.care-hero {
-  width: 100%;
-  height: 52.667vw;  /* image aspect ratio */
-  background-image: url('../img/IMG_0012_3a.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  margin-bottom: 60px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0 36px;
-  justify-content: center;
-
-  color: white;
-  font-size: 30px;
-}
-
-.care-hero > nav {
-  margin-top: 24px;
-  font-size: 18px;
-}
-
-.care-hero > h1 {
-  font-size: 96px;
-  font-style: italic;
-  margin-top: 100px;
-  margin-left: -8px;
-}
-
-.care-hero .aliases {
-  font-size: 18px;
+  .care.carebox {
+    width: 75%;
+  }
 }
 
